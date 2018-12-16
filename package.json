@@ -1,0 +1,31 @@
+{
+  "name": "kickstart-react-typescript",
+  "version": "1.0.0",
+  "description": "Kickstarter for a React project using Typescript and Parcel as the Bundler",
+  "main": "index.js",
+  "repository": "https://github.com/lmarzy/kickstart-react-typescript.git",
+  "author": "lmarzy <me@phz3.net>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html/",
+    "precommit": "pretty-quick --staged"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "parcel-bundler": "^1.10.3",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  }
+}
