@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
+import 'kickstart-sass';
+
 import Home from '../features/Home/Home';
 import About from '../features/About/About';
 
@@ -12,7 +14,7 @@ interface AppProps {
 const App = ({ a, b }: AppProps) => (
   <Router>
     <>
-      <ul>
+      <ul data-testid="nav">
         <li>
           <Link to="/">Home</Link>
         </li>

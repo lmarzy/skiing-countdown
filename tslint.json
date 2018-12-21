@@ -6,7 +6,10 @@
     "variable-name": false,
     "function-name": false,
     "jsx-no-lambda": false,
-    "member-access": [true, "no-public"]
+    "member-access": [true, "no-public"],
+    "ordered-imports": false,
+    "jsx-boolean-value": false,
+    "interface-name": false
   },
   "rulesDirectory": []
 }

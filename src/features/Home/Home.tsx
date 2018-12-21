@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './styles.scss';
 
 export const initialState = {
   title: 'Home',
@@ -13,7 +14,7 @@ class Home extends React.Component<{}, HomeState> {
     const { title } = this.state;
 
     return (
-      <div>
+      <div className="home">
         <h1>{title}</h1>
       </div>
     );
