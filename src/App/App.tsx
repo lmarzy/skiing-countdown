@@ -1,31 +1,15 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import '../styles/main.scss';
 
-import 'kickstart-sass';
+import Header from './components/Header/Header';
 
-import Home from '../features/Home/Home';
-import About from '../features/About/About';
+import Home from '../Home/Home';
 
-interface AppProps {
-  a: string;
-  b: number;
-}
-
-const App = ({ a, b }: AppProps) => (
-  <Router>
-    <>
-      <ul data-testid="nav">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-    </>
-  </Router>
+const App = () => (
+  <>
+    <Header />
+    <Home />
+  </>
 );
 
 export default App;

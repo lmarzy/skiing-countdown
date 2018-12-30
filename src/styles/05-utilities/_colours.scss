@@ -1,9 +1,9 @@
 // ========================================================================
-// FEATURES/HOME
+// UTILITIES/COLOURS
 // ========================================================================
 
-@import '~sassHelpers';
-
-.home {
-  background: color(red);
+@each $theme, $color in $colors {
+  .u-col-#{$theme} {
+    color: $color !important;
+  }
 }

@@ -1,0 +1,20 @@
+// ========================================================================
+// HOME
+// ========================================================================
+
+@import '~sassHelpers';
+
+.main {
+  display: flex;
+  height: calc(100vh - 48px);
+  background-image: url(#{$imgPath}/bg-main-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+
+  @include bp(10) {
+    background-image: url(#{$imgPath}/bg-main-2.jpg);
+  }
+}

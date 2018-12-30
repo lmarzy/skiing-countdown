@@ -13,13 +13,12 @@
     "precommit": "pretty-quick --staged"
   },
   "alias": {
-    "sassHelpers": "./node_modules/kickstart-sass/src/01-helpers/helpers.scss",
-    "sass": "./node_modules/kickstart-sass/src/main.scss"
+    "sassHelpers": "./src/styles/01-helpers/helpers.scss",
+    "sass": "./src/styles/main.scss"
   },
   "dependencies": {
     "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-router-dom": "^4.3.1"
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "@types/jest": "^23.3.10",

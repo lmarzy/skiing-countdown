@@ -1,0 +1,58 @@
+// ========================================================================
+// COUNTDOWN
+// ========================================================================
+
+@import '~sassHelpers';
+
+.countdown {
+  margin-bottom: spacer(4);
+  text-align: center;
+
+  &__title {
+    margin-bottom: spacer(1);
+    font-size: font-size(f3);
+    text-transform: uppercase;
+
+    @include bp(10) {
+      font-size: font-size(f4);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -(spacer(1));
+
+    li {
+      padding-left: spacer(1);
+
+      div {
+        width: 65px;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        background: rgba(black, 0.7);
+        border-radius: 4px;
+
+        @include bp(10) {
+          width: 100px;
+          height: 120px;
+
+          span:first-child {
+            font-size: font-size(f5);
+          }
+          span:last-child {
+            font-size: font-size(f2);
+          }
+        }
+      }
+
+      span:first-child {
+        font-size: font-size(f4);
+      }
+    }
+  }
+}

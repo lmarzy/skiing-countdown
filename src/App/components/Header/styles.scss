@@ -1,0 +1,17 @@
+// ========================================================================
+// APP/COMPONENTS/HEADER
+// ========================================================================
+
+@import '~sassHelpers';
+
+.site-header {
+  background: color(main);
+  color: white;
+  text-align: center;
+
+  &__title {
+    height: 48px;
+    line-height: 48px;
+    font-size: font-size(f2);
+  }
+}
