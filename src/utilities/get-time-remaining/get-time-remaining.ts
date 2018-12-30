@@ -1,7 +1,14 @@
-const getTimeRemaining = (date: any): any => {
-  const today = new Date();
+interface getTimeRemainingModel {
+  weeks: number;
+  daysLeft: number;
+  hours: number;
+  minutes: number;
+}
 
-  const t = Date.parse(date) - Date.parse(today);
+const getTimeRemaining = (date: string): getTimeRemainingModel => {
+  const today: Date = new Date();
+
+  const t = Date.parse(date) - Date.parse(String(today));
 
   const days = Math.floor(t / (1000 * 60 * 60 * 24));
 

@@ -28,8 +28,6 @@ const remainingTime = (state: HomeState): HomeState => {
   const timeRemainingToSki = getTimeRemaining(skiDate);
   const timeRemainingToZoeBreakage = getTimeRemaining(zoeBrokenBoneDate);
 
-  console.log(timeRemainingToZoeBreakage.daysleft);
-
   const newState = { ...state };
   newState.ski.weeks = timeRemainingToSki.weeks;
   newState.ski.days = timeRemainingToSki.daysLeft;
