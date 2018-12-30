@@ -3,16 +3,23 @@ import './styles.scss';
 
 interface CountdownProps {
   title: string;
+  weeks: number;
   days: number;
   hours: number;
   minutes: number;
-  seconds: number;
+  type: string;
 }
 
-const Countdown = ({ title, days, hours, minutes, seconds }: CountdownProps) => (
-  <section className="countdown">
+const Countdown = ({ title, weeks, days, hours, minutes, type }: CountdownProps) => (
+  <section className={`countdown countdown--${type}`}>
     <h2 className="countdown__title">{title}</h2>
     <ol className="countdown__list">
+      <li>
+        <div>
+          <span>{weeks}</span>
+          <span>Weeks</span>
+        </div>
+      </li>
       <li>
         <div>
           <span>{days}</span>
@@ -29,12 +36,6 @@ const Countdown = ({ title, days, hours, minutes, seconds }: CountdownProps) => 
         <div>
           <span>{minutes}</span>
           <span>Minutes</span>
-        </div>
-      </li>
-      <li>
-        <div>
-          <span>{seconds}</span>
-          <span>Seconds</span>
         </div>
       </li>
     </ol>
