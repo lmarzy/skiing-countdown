@@ -5,7 +5,7 @@
 @import '~sassHelpers';
 
 .countdown {
-  margin-bottom: spacer(6);
+  margin-bottom: spacer(4);
   text-align: center;
 
   &--ski {
@@ -18,6 +18,10 @@
     div {
       background: rgba(rgb(181, 0, 0), 0.7);
     }
+  }
+
+  @include bp(10) {
+    margin-bottom: spacer(6);
   }
 
   &__title {
