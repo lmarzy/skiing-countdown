@@ -48,7 +48,8 @@ export default class Home extends React.Component<{}, HomeState> {
   private interval: any;
 
   componentDidMount() {
-    this.interval = setInterval(() => this.setState(remainingTime(this.state)), 1000);
+    this.setState(remainingTime(this.state));
+    this.interval = setInterval(() => this.setState(remainingTime(this.state)), 60000);
   }
 
   componentWillUnmount() {
