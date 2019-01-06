@@ -1,11 +1,11 @@
-interface getTimeRemainingModel {
+interface GetTimeRemainingModel {
   weeks: number;
   daysLeft: number;
   hours: number;
   minutes: number;
 }
 
-const getTimeRemaining = (date: string): getTimeRemainingModel => {
+const getTimeRemaining = (date: string): GetTimeRemainingModel => {
   const today: Date = new Date();
 
   const t = Date.parse(date) - Date.parse(String(today));

@@ -11,7 +11,7 @@ export const initialState = {
     hours: 0,
     minutes: 0,
   },
-  zoe: {
+  brokenBone: {
     weeks: 0,
     days: 0,
     hours: 0,
@@ -22,11 +22,11 @@ export const initialState = {
 export type HomeState = Readonly<typeof initialState>;
 
 const remainingTime = (state: HomeState): HomeState => {
-  const skiDate = 'February 08 2019 12:00:00 GMT';
-  const zoeBrokenBoneDate = 'February 08 2019 12:30:00 GMT';
+  const skiDate = 'February 08 2019 15:30:00 GMT';
+  const brokenBoneDate = 'February 08 2019 16:30:00 GMT';
 
   const timeRemainingToSki = getTimeRemaining(skiDate);
-  const timeRemainingToZoeBreakage = getTimeRemaining(zoeBrokenBoneDate);
+  const timeRemainingToBoneBreakage = getTimeRemaining(brokenBoneDate);
 
   const newState = { ...state };
   newState.ski.weeks = timeRemainingToSki.weeks;
@@ -34,10 +34,10 @@ const remainingTime = (state: HomeState): HomeState => {
   newState.ski.hours = timeRemainingToSki.hours;
   newState.ski.minutes = timeRemainingToSki.minutes;
 
-  newState.zoe.weeks = timeRemainingToZoeBreakage.weeks;
-  newState.zoe.days = timeRemainingToZoeBreakage.daysLeft;
-  newState.zoe.hours = timeRemainingToZoeBreakage.hours;
-  newState.zoe.minutes = timeRemainingToZoeBreakage.minutes;
+  newState.brokenBone.weeks = timeRemainingToBoneBreakage.weeks;
+  newState.brokenBone.days = timeRemainingToBoneBreakage.daysLeft;
+  newState.brokenBone.hours = timeRemainingToBoneBreakage.hours;
+  newState.brokenBone.minutes = timeRemainingToBoneBreakage.minutes;
 
   return newState;
 };
@@ -57,7 +57,7 @@ export default class Home extends React.Component<{}, HomeState> {
   }
 
   render() {
-    const { ski, zoe } = this.state;
+    const { ski, brokenBone } = this.state;
 
     return (
       <main className="main">
@@ -71,12 +71,12 @@ export default class Home extends React.Component<{}, HomeState> {
             type="ski"
           />
           <Countdown
-            title="Zoe Bone Breakage"
-            weeks={zoe.weeks}
-            days={zoe.days}
-            hours={zoe.hours}
-            minutes={zoe.minutes}
-            type="zoe"
+            title="Ski Newbie Bone Breakage"
+            weeks={brokenBone.weeks}
+            days={brokenBone.days}
+            hours={brokenBone.hours}
+            minutes={brokenBone.minutes}
+            type="brokenBone"
           />
         </div>
       </main>
